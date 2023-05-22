@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Currency Converter</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" type="text/css" media="screen" href="style.css" />
+  </head>
+  <body>
+    <div class="modal hidden">
+      <button class="modal-close" style="font-size: 40px">&times;</button>
+      <h2>Currency Converter</h2>
+      <br />
+      <p class="modal-paragraph">
+        This is a very simple currecny converter app made with html, css and
+        javascrpit. This converter works with three currencies: United States
+        Dollar, Malaysian Ringgit and Bangladeshi Taka. The conversion rates are
+        hardcorded in line 4 and 5 of the JavaScript file. For real time value
+        conversion please update those values using the button on the top right corner 
+        prior to performing your operations.
+      </p>
+      <br />
+      <p class="modal-paragraph">
+        This is very simple to use. Click on any 3 of the buttons. Then enter
+        the amount you want to convert. Finally press the Convert button.
+      </p>
+    </div>
+    <!-- Update Rate Div -->
+    <div class="updateRate hidden">
+      <button class="updateRate-close" style="font-size: 40px">&times;</button>
+      <h2>Update Rate</h2>
+      <br />
+      <table>
+        <tr>
+          <td style="width: 30%">USD to RM rate</td>
+          <td>
+            <input type="text" placeholder="1 USD = ? RM" style="width: 100%" class="usdToRMRate"/>
+          </td>
+        </tr>
+        <tr>
+          <td>USD to BDT rate</td>
+          <td>
+            <input
+              type="text"
+              placeholder="1 USD = ? BDT"
+              style="width: 100%"
+              class="usdToBDTRate"
+            />
+          </td>
+        </tr>
+        <tr>
+          <td></td>
+          <td><input type="button" value="Submit" class="btnSubmit"/> &#160 &#160 <input type="button" value="Reset" class="btnReset"/></td>
+        </tr>
+        <tr>
+          <td></td>
+          <td><p class="rateUpdateMsg hidden">Rate has been updated.</p></td>
+        </tr>
+      </table>
+    </div>
+    <!-- Added hidden class to overlay class to make it work. -->
+    <div class="overlay hidden"></div>
+    <button class="help-button">?</button>
+    <button class="update-button">📈</button>
+    <h1>Currency Converter</h1>
+    <br />
+    <p class="main-description">
+      Please select the currency below that you wish to convert
+    </p>
+    <br /><br />
+    <button class="button-class-1 btn-usd">United Statest Dollar</button>
+    <button class="button-class-1 btn-myr">Malaysian Ringgit</button>
+    <button class="button-class-1 btn-bdt">Bangladeshi Taka</button><br /><br />
+    <div class="enter-value">
+      <p class="message-enter-value">Please enter a value</p>
+      <br />
+    </div>
+    <!-- USD Converter -->
+    <div class="usd-converter">
+      <input
+        type="text"
+        class="money-usd"
+        placeholder="Please enter amount in United States Dollar"
+      />&nbsp<button class="button-class-2 convert-usd">Convert</button
+      ><br /><br />
+      <p>
+        Amount in Malaysian Ringitt: <span class="currency-us-2-myr">0.00</span>
+      </p>
+      <p>
+        Amount in Bangladeshi Taka: <span class="currency-us-2-bdt">0.00</span>
+      </p>
+    </div>
+    <!-- RM Converter -->
+    <div class="rm-converter">
+      <input
+        type="text"
+        class="money-rm"
+        placeholder="Please enter amount in Malaysian Ringgit"
+      />&nbsp<button class="button-class-2 convert-rm">Convert</button
+      ><br /><br />
+      <p>
+        Amount in United States Dollar:
+        <span class="currency-rm-2-usd">0.00</span>
+      </p>
+      <p>
+        Amount in Bangladeshi Taka: <span class="currency-rm-2-bdt">0.00</span>
+      </p>
+    </div>
+    <!-- BDT Converter -->
+    <div class="bdt-converter">
+      <input
+        type="text"
+        class="money-bdt"
+        placeholder="Please enter amount in Bangladeshi Taka"
+      />&nbsp<button class="button-class-2 convert-bdt">Convert</button
+      ><br /><br />
+      <p>
+        Amount in United States Dollar:
+        <span class="currency-bdt-2-usd">0.00</span>
+      </p>
+      <p>
+        Amount in Malaysian Ringitt: <span class="currency-bdt-2-rm">0.00</span>
+      </p>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
